@@ -1,9 +1,11 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, request, jsonify
 
 db = SQLAlchemy()
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    name = dbColumn(db.String(80),unique = False,nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), unique=False, nullable=False)
@@ -15,5 +17,6 @@ class User(db.Model):
         return {
             "id": self.id,
             "email": self.email,
+            "name" : self.mail,
             # do not serialize the password, its a security breach
         }

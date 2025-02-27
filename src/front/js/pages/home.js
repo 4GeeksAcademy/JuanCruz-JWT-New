@@ -5,6 +5,7 @@ import { Signup } from "../component/signup";
 import "../../styles/home.css";
 import video001 from "../../img/video001.mp4";
 
+
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 

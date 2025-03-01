@@ -76,15 +76,15 @@ export const Signup = () => {
         <div className="container text-white">
             <div className="row">
                 <div className="col-md-6 offset-md-3">
-                    <h2>Súbete por aquí... Solo si quieres!</h2>
+                 
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="name">Tu lindo nombre</label>
+                            <label htmlFor="name">Tu nombre</label>
                             <input
                                 type="text"
                                 className="form-control inputStyle"
                                 id="name"
-                                placeholder="Hechame tu nombre por aqui anda"
+                                placeholder="Pon aqui tu nombre"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -92,18 +92,18 @@ export const Signup = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Tu Email</label>
+                            <label htmlFor="email">E-mail</label>
                             <input
                                 type="email"
                                 className="form-control inputStyle"
                                 id="email"
-                                placeholder="Dame tu email"
+                                placeholder="Pon aqui tu email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
 
                             />
-                            <small id="emailHelp" className="form-text text-white">No compatiremos tu email con nadie. Te lo prometemos!</small>
+                            <small id="emailHelp" className="form-text text-white"></small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
@@ -111,7 +111,7 @@ export const Signup = () => {
                                 type="password"
                                 className="form-control inputStyle"
                                 id="password"
-                                placeholder="Te lo dejé sencillo para que no te compliques"
+                                placeholder="8 caracteres, incluye mayuscula, minuscula, un numero y un caracter esp. ;)"
                                 value={formData.password}
                                 onChange={handleChangeBarr}
                                 required
@@ -130,7 +130,7 @@ export const Signup = () => {
                                 ></div>
                             </div>
                         </div>
-                        <button type="submit" className="me-2 mt-2">Pinchame!</button>
+                        <button type="submit" className="me-2 mt-2">Crear usuario</button>
                         <Link to="/loginView">
                             <button className="me-2 mt-2">Ir a login</button>
                         </Link>

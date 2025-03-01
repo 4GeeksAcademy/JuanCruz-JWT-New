@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Login } from "../component/login";
 import "../../styles/home.css";
-//import video001 from "../../img/video001.mp4";
+
 
 export const LoginView = () => {
 

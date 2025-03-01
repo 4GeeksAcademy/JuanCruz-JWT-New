@@ -5,24 +5,7 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
-.video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Hace que el video se ajuste sin deformarse */
-    z-index: -1;
-    /* Envía el video al fondo */
-  }
+
   
   .fondoSignup {
     background-color: rgba(0, 0, 0, 0.541);
@@ -51,22 +34,7 @@
     position: relative;
   }
   
-  button::after {
-    --move1: inset(50% 50% 50% 50%);
-    --move2: inset(31% 0 40% 0);
-    --move3: inset(39% 0 15% 0);
-    --move4: inset(45% 0 40% 0);
-    --move5: inset(45% 0 6% 0);
-    --move6: inset(14% 0 61% 0);
-    clip-path: var(--move1);
-    content: 'GLITCH';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-  }
+  
   
   button:hover::after {
     animation: glitch_4011 1s;
@@ -87,73 +55,17 @@
     box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
   }
   
-  @keyframes glitch_4011 {
-    0% {
-      clip-path: var(--move1);
-      transform: translate(0px, -10px);
-    }
-  
-    10% {
-      clip-path: var(--move2);
-      transform: translate(-10px, 10px);
-    }
-  
-    20% {
-      clip-path: var(--move3);
-      transform: translate(10px, 0px);
-    }
-  
-    30% {
-      clip-path: var(--move4);
-      transform: translate(-10px, 10px);
-    }
-  
-    40% {
-      clip-path: var(--move5);
-      transform: translate(10px, -10px);
-    }
-  
-    50% {
-      clip-path: var(--move6);
-      transform: translate(-10px, 10px);
-    }
-  
-    60% {
-      clip-path: var(--move1);
-      transform: translate(10px, -10px);
-    }
-  
-    70% {
-      clip-path: var(--move3);
-      transform: translate(-10px, 10px);
-    }
-  
-    80% {
-      clip-path: var(--move2);
-      transform: translate(10px, -10px);
-    }
-  
-    90% {
-      clip-path: var(--move4);
-      transform: translate(-10px, 10px);
-    }
-  
-    100% {
-      clip-path: var(--move1);
-      transform: translate(0);
-    }
-  }
   
   .image-container {
     position: fixed; /* Fija el fondo en su posición */
     top: 0;
     left: 0;
-    width: 100%; /* Abarca todo el ancho */
-    height: 100%; /* Abarca todo el alto */
-    background-size: cover; /* Escala la imagen para cubrir todo el espacio */
+    width: 100%; 
+    height: 100%; 
+    background-size: cover;
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    z-index: -1; /* Envía el fondo detrás de los elementos */
+    z-index: -1; 
   }
   
   .containerProfile{

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Profile } from "../component/profile";
-import imagenFondo from "../../img/imagenFondo.jpg";
+import imagenFondo from "../../img/imagenFondo.png";
 
 export const ProfileView = () => {
   return (

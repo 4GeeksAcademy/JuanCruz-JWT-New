@@ -3,27 +3,21 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Signup } from "../component/signup";
 import "../../styles/home.css";
-import video001 from "../../img/video001.mp4";
+
 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="video-container">
-			<video
-				className="background-video"
-				autoPlay
-				loop
-				muted
-			>
-				<source src={video001} type="video/mp4" />
+		
+			
 
-			</video>
+			
 			<div className="container fondoSignup text-center mt-5">
 
 
-				<h1 className="text-white animate__animated animate__pulse">Welcome to my last project</h1>
+				<h1 className="text-white animate__animated animate__pulse">Bienvenido a la pagina de login</h1>
 				< Signup />
 
 				<div className="alert alert-info text-center mx-auto col-6 mt-5">
@@ -38,6 +32,6 @@ export const Home = () => {
 				</p>
 
 			</div>
-		</div>
+		
 	);
 };

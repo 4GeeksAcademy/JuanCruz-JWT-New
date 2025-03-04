@@ -9,7 +9,6 @@ export const Signup = () => {
     const navigate = useNavigate()
     const [error, setError] = useState("");
     const [formData, setFormData] = useState({
-        name: "",
         email: "",
         password: "",
     });
@@ -78,19 +77,6 @@ export const Signup = () => {
                 <div className="col-md-6 offset-md-3">
                  
                     <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="name">Tu nombre</label>
-                            <input
-                                type="text"
-                                className="form-control inputStyle"
-                                id="name"
-                                placeholder="Pon aqui tu nombre"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-
-                            />
-                        </div>
                         <div className="form-group">
                             <label htmlFor="email">E-mail</label>
                             <input

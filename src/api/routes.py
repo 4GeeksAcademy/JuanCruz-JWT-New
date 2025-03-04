@@ -29,14 +29,14 @@ def handle_hello():
 def register():
     data = request.get_json()
 
-    if User.query.filter_by(email=data['email']).first():
-        return jsonify({"message": "El correo electrónico ya está en uso"}), 400
+    # if User.query.filter_by(email=data['email']).first():
+    #     return jsonify({"message": "El correo electrónico ya está en uso"}), 400
     
     hashed_password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
     new_user = User(
-        name=data['name'],
         email=data['email'],
-        password=hashed_password
+        password=hashed_password,
+        is_active = True
         )
     
     db.session.add(new_user)

@@ -106,6 +106,36 @@ const getState = ({ getStore, getActions, setStore }) => {
           user: JSON.parse(localStorage.getItem("user")) || null,
         });
       },
+
+      deleteUser: async () => {
+        try {
+          const store = getStore();
+          if (!store.authToken) throw new Error("No hay usuario autenticado");
+
+          const response = await fetch(`${process.env.BACKEND_URL}/api/user`, {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${store.authToken}`,
+            },
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || "Error al eliminar el usuario");
+          }
+
+          setStore({ authToken: null, user: null });
+          localStorage.removeItem("authToken");
+          localStorage.removeItem("user");
+
+          console.log("Usuario eliminado correctamente");
+          return true;
+        } catch (error) {
+          console.error("Error al eliminar usuario:", error.message);
+          return false;
+        }
+      },
     },
   };
 };

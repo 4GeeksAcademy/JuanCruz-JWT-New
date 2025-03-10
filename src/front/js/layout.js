@@ -35,7 +35,7 @@ const Layout = () => {
                 <ScrollToTop>
                     <Navbar />
                     <Routes>
-                        <Route element={<PublicRoutes user={store.user} />}>
+                        {/* <Route element={<PublicRoutes user={store.user} />}> */}
 
                             <Route element={<Home />} path="/" />
                             <Route element={<LoginView />} path="/loginView" />
@@ -43,7 +43,7 @@ const Layout = () => {
                             <Route element={<Single />} path="/single/:theid" />
                             <Route element={<h1>Not found!</h1>} />
                             
-                        </Route>
+                        {/* </Route> */}
 
                         <Route element={<PrivateRoutes user={store.user} />}>
                             <Route element={<ProfileView />} path="/profileView" />

@@ -41,7 +41,7 @@ export const Profile = () => {
 
                 <div className="col md-8">
 
-                    <h2 className="text-white">{store.user?.name}</h2>
+                    <h2 className="text-white">{store.user.email}</h2>
                     <p className="text-white">
                         Estos son algunos de los proyectos hechos en clase!!! 
                     </p>

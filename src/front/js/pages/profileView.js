@@ -28,13 +28,7 @@ export const ProfileView = () => {
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="col-8 mx-auto">
           <Profile />
-          {/* Botón para eliminar cuenta */}
-          <button
-            className="btn btn-danger mt-3"
-            onClick={handleDeleteUser}
-          >
-            Eliminar Cuenta
-          </button>
+          
         </div>
       </div>
     </div>
